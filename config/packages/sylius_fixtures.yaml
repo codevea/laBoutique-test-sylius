@@ -1,0 +1,156 @@
+# \vendor\sylius\sylius\src\Sylius\Bundle\CoreBundle\Resources\config\app\fixtures\shop_configuration.yaml
+sylius_fixtures:
+    suites:
+        laboutique:
+            listeners:
+                orm_purger: ~
+                images_purger: ~
+                logger: ~
+
+            fixtures:
+                locale:
+                    options:
+                        locales:
+                            - 'fr_FR'
+                currency:
+                    options:
+                        currencies:
+                            - 'EUR'
+
+                geographical:
+                    options:
+                        zones:
+                            FR:
+                                name: 'France'
+                                countries:
+                                    - 'FR'
+                cap_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            category:
+                                code: 'MENU_CATEGORY'
+                                name: 'Catégorie'
+                                translations:
+                                    fr_FR:
+                                        name: 'Catégorie'
+                                children:
+                                    -   code: 'femmes'
+                                        name: 'Femmes'
+                                        slug: 'femmes'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Femmes'
+                                        children:
+                                        -   code: 'femmes_chaussures'
+                                            name: 'Chaussures'
+                                            slug: 'chaussures-de-femmes'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Chaussures femmes'
+                                        -   code: 'femmes_vetements'
+                                            name: 'Vêtements'
+                                            slug: 'vetements-pour-les-femmes'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Vêtements femmes'
+                                    -   code: 'hommes'
+                                        name: 'Hommes'
+                                        slug: 'Hommes'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Hommes'
+                                        children:
+                                        -   code: 'hommes_chaussures'
+                                            name: 'Chaussures'
+                                            slug: 'chaussures-pour-hommes'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Chaussures hommes'
+                                        -   code: 'hommes_vetements'
+                                            name: 'Vêtements'
+                                            slug: 'vetements-pour-les-hommes'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Vêtements hommes'
+                                    -   code: 'enfants'
+                                        name: 'Enfants'
+                                        slug: 'enfants'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Enfants'
+                                        children:
+                                        -   code: 'enfants_chaussures'
+                                            name: 'Chaussures'
+                                            slug: 'chaussures-pour-les-enfants'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Chaussures enfants'
+                                        -   code: 'enfants_vetements'
+                                            name: 'Vêtements'
+                                            slug: 'vetements-pour-les-enfants'
+                                            translations:
+                                                fr_FR:
+                                                    name: 'Vêtements enfants'
+                admin_user:
+                    name: 'admin_user'
+                    options:
+                        custom:
+                            -   email: 'nathalie.vrecq@gmail.com'
+                                username: 'admin'
+                                password: 'codevea1974?'
+                                enabled: true
+                                locale_code: 'fr_FR'
+                                first_name: 'Nathalie'
+                                last_name: 'Vrecq'
+                                avatar: '@SyliusCoreBundle/Resources/fixtures/adminAvatars/john.webp'
+                channel:
+                    options:
+                        custom:
+                            la_boutique_commerce: # Creating a new channel
+                                name: "laBoutique"
+                                code: "LA_BOUTIQUE"
+                                locales:
+                                    - 'fr_FR'
+                                currencies:
+                                    - "EUR"
+                                enabled: true
+                                hostname: "localhost"
+                                shop_billing_data:
+                                    company: 'LaBoutique'
+                                    tax_id: '000000000'
+                                    country_code: 'FR'
+                                    street: 'rue de laboutique'
+                                    city: 'LaBoutique ville'
+                                    postcode: '83590'
+                                menu_taxon: 'MENU_CATEGORY'
+                                contact_phone_number: '+33 000 000 000'
+                                contact_email: 'contact@laboutique.com'
+                cap_product:
+                    name: product
+                    options:
+                        custom:
+                            -   name: 'Moca bleu à fleurs'
+                                tax_category: 'other'
+                                channels:
+                                    - 'LA_BOUTIQUE'
+                                main_taxon: 'femmes_chaussures'
+                                taxons:
+                                    - 'femmes'
+                                    - 'femmes_chaussures'
+                                # product_attributes:
+                                #     cap_brand: 'Chaussure femmes à fleurs'
+                                #     cap_collection: 'Collection 2025'
+                                #     cap_material: '100% cuirs'
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/caps/cap_19.webp', type: 'main' }
+                            -   name: 'Ballerine Bouton Or'
+                                tax_category: 'other'
+                                channels:
+                                    - 'LA_BOUTIQUE'
+                                main_taxon: 'femmes_chaussures'
+                                taxons:
+                                    - 'femmes'
+                                    - 'femmes_chaussures'
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/caps/cap_20.webp', type: 'main' }
