@@ -115,7 +115,7 @@ sylius_fixtures:
                                 currencies:
                                     - "EUR"
                                 enabled: true
-                                hostname: "localhost"
+                                hostname: "127.0.0.1:8000"
                                 shop_billing_data:
                                     company: 'LaBoutique'
                                     tax_id: '000000000'

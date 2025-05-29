@@ -28,3 +28,22 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+# customization menu
+# https://old-docs.sylius.com/en/1.4/customization/menu.html
+    app.listener.admin.menu_builder:
+        class: App\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+    app.listener.shop.menu_builder:
+        class: App\Menu\AccountMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.shop.account, method: addAccountMenuItems }
+    app.listener.admin.customer.show.menu_builder:
+        class: App\Menu\AdminCustomerShowMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.customer.show, method: addAdminCustomerShowMenuItems }
+    app.listener.admin.order.show.menu_builder:
+        class: App\Menu\AdminOrderShowMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.order.show, method: addAdminOrderShowMenuItems }
