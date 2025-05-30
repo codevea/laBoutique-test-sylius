@@ -122,6 +122,44 @@
             "ref": "d1227d002b70d1a1f941d91845fcd7ac7fbfc929"
         }
     },
+    "monsieurbiz/sylius-homepage-plugin": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/monsieurbiz/symfony-recipes",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "0f2818b7d56608e2a2a02a8a51faa20d2759cde0"
+        },
+        "files": [
+            "./config/packages/monsieurbiz_sylius_homepage_plugin.yaml",
+            "./config/routes/monsieurbiz_sylius_homepage_plugin.yaml"
+        ]
+    },
+    "monsieurbiz/sylius-media-manager-plugin": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/monsieurbiz/symfony-recipes",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "fe3a5fa39555dbd07e64d47f607067f1c457abf9"
+        },
+        "files": [
+            "./config/packages/monsieurbiz_media_manager_plugin.yaml"
+        ]
+    },
+    "monsieurbiz/sylius-rich-editor-plugin": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/monsieurbiz/symfony-recipes",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "e23be168b165799cc50ed29d3cde5e75bde03e8e"
+        },
+        "files": [
+            "./config/packages/monsieurbiz_sylius_rich_editor_plugin.yaml",
+            "./config/routes/monsieurbiz_sylius_rich_editor_plugin.yaml"
+        ]
+    },
     "nelmio/alice": {
         "version": "3.13",
         "recipe": {
@@ -338,6 +376,15 @@
         "files": [
             "config/packages/mailer.yaml"
         ]
+    },
+    "symfony/maker-bundle": {
+        "version": "1.63",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
     },
     "symfony/messenger": {
         "version": "7.1",
