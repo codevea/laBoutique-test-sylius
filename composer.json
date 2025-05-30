@@ -25,12 +25,14 @@
         "php": "^8.2",
         "monsieurbiz/sylius-homepage-plugin": "^2.0",
         "monsieurbiz/sylius-media-manager-plugin": "^2.0",
+        "monsieurbiz/sylius-menu-plugin": "^2.0",
         "monsieurbiz/sylius-rich-editor-plugin": "^3.0",
         "sylius/paypal-plugin": "^2.0",
         "sylius/sylius": "~2.0.0",
         "symfony/dotenv": "^6.4 || ^7.1",
         "symfony/flex": "^2.4",
-        "symfony/runtime": "^6.4 || ^7.1"
+        "symfony/runtime": "^6.4 || ^7.1",
+        "symfony/translation": "7.2"
     },
     "require-dev": {
         "behat/behat": "^3.14",

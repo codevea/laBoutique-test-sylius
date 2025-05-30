@@ -23,4 +23,10 @@ Documentation is available at [docs.sylius.com](http://docs.sylius.com).
 
 ## 3 - Test install SyliusHomePage Plugin Monsieur Biz
 
+symfony make
 https://github.com/monsieurbiz/SyliusHomepagePlugin/issues/48
+
+## 4 - Test install menu Monsieur Biz
+
+[monsieurbiz sylius-menu-plugin](https://github.com/monsieurbiz/SyliusMenuPlugin)
+info: https://github.com/monsieurbiz/SyliusMenuPlugin/pull/36

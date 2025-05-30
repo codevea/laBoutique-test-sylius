@@ -147,6 +147,19 @@
             "./config/packages/monsieurbiz_media_manager_plugin.yaml"
         ]
     },
+    "monsieurbiz/sylius-menu-plugin": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/monsieurbiz/symfony-recipes",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "dcad5d9a22b4bd7af3d5ff222f50519b4efad1b9"
+        },
+        "files": [
+            "./config/packages/monsieurbiz_sylius_menu_plugin.yaml",
+            "./config/routes/monsieurbiz_sylius_menu_plugin.yaml"
+        ]
+    },
     "monsieurbiz/sylius-rich-editor-plugin": {
         "version": "3.0",
         "recipe": {
